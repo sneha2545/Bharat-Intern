@@ -1,0 +1,84 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ecf0f1; /* Background color */
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #3498db; /* Blue color */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+header h1, header p {
+    margin: 0;
+}
+
+section {
+    text-align: center; /* Center align content */
+}
+
+#about {
+    background-color: #d872af; /* Light gray background */
+    padding: 20px;
+    border: solid black;
+}
+
+#skills {
+    background-color: #f1c40f; /* Yellow background */
+    padding: 20px;
+    border: solid black;
+}
+
+#projects {
+    background-color: #2ecc71; /* Green background */
+    padding: 20px;
+    border: solid black;
+}
+
+.box {
+    border: 1px solid #bdc3c7; /* Border color */
+    border-radius: 5px;
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+}
+
+h2 {
+    color: #2c3e50; /* Dark gray color */
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.project {
+    border: 1px solid #2c3e50; /* Border color */
+    padding: 10px;
+    margin-bottom: 15px;
+
+}
+
+footer {
+    background-color: #3498db; /* Blue color */
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+#img{
+    width: 150;
+    height: 200;
+}
