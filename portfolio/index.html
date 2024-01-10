@@ -1,61 +1,150 @@
-<!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Sneha Gupta - Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/66aa7c98b3.js" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 </head>
+
 <body>
-
-    <header>
-        <h1>Sneha Gupta</h1>
-        <p>Web Developer</p>
-    </header>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am pursuing my Bachelor's degree in Computer Science stream from Roorkee Institute of Technology from 2023 .
-            As a developer, I enjoy bridging the gap between functionality and design.
-            My goal is to always build applications that are scalable and efficient under the hood while providing engaging, pixel-perfect user experiences. 
-            In addition, I am highly responsive to client needs and also committed to helping people realize their vision.
-        </p>
-    </section>
-
-    <section id="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML5</li>
-            <li>CSS3</li>
-            <li>JavaScript</li>
-            <li>Version Control (Git)</li>
+  <header class="header">
+    <nav class="navbar">
+      <div class="navbar-container container">
+        <div>
+          <h1 class="navbar-brand">Sneha Gupta</h1>
+        </div>
+        <ul class="menu-items">
+          <li><a href="#about">About</a></li>
+          <li><a href="#my-works">Portfolio</a></li>
+          <li><a href="#contact-me">Contact</a></li>
         </ul>
-    </section>
+      </div>
+    </nav>
+    <div class="home-content" id="home-page">
+      <div class="name">
+        <h1>Hi, I'm Sneha Gupta</h1>
+        <p>A Web Developer.</p>
+      </div>
+      <div class="angle-down-icon">
+        <a href="#about"><i class="fas fa-angle-down"></i></a>
+      </div>
+    </div>
+  </header>
+  <section class="about-me" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="left-content">
+          <div>
+            <h1 class="about-heading">About Me</h1>
+          </div>
+          <p>
+            I am pursuing my Bachelor's degree in Computer Science stream from Roorkee Institute of Technology from 2023 .
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-            <h3>Project 1</h3>
-            <p>Homepage of Netflix</p>
-            <div>
-                <img src="Screenshot 2024-01-09 165302.png" alt=""
-                width="600" height="337.500">
-            </div>
+As a developer, I enjoy bridging the gap between functionality and design. 
+My goal is to always build applications that are scalable and efficient under the hood while providing engaging, pixel-perfect user experiences.
+ In addition, I am highly responsive to client needs and also committed to helping people realize their vision.
+          </p>
+          <div class="work-arrow">
+            <p>
+              <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
+            </p>
+          </div>
         </div>
-        <div class="project">
-            <h3>Project 2</h3>
-            <p>Weather App</p>
+        <div class="skills">
+          <div class="right-content">
             <div>
-                <img src="Screenshot 2024-01-09 165643.png" alt=""
-                width="600" height="337.500">
+              <h1 class="skills-heading">My Skills</h1>
             </div>
+            <div class="skills-bar">
+              <div class="bar">
+                <div class="info">
+                  <span>HTML</span>
+                </div>
+                <div class="progress-line"><span class="html"></span></div>
+                <div class="bar">
+                  <div class="info">
+                    <span>CSS</span>
+                  </div>
+                  <div class="progress-line"><span class="css"></span></div>
+                  <div class="bar">
+                    <div class="info">
+                      <span>BOOTSTRAP</span>
+                    </div>
+                    <div class="progress-line"><span class="bootstrap"></span></div>
+                    <div class="bar">
+                      <div class="info">
+                        <span>JAVASCRIPT</span>
+                      </div>
+                      <div class="progress-line"><span class="javascript"></span></div>
+                      <div class="bar">
+                        <div class="info">
+                          <span>C Programming</span>
+                        </div>
+                        <div class="progress-line"><span class="c"></span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="work-arrow-2">
+              <p>
+                <a href="#my-works">Check out my work <i class="fas fa-arrow-down"></i></a>
+              </p>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
+  <section id="my-works">
+    <div class="Project">
+      <div class="proj-heading">
+        <h1>Project</h1>
+      </div>
+      <div class="portfolio-content container">
+        <div class="proj-1">
+          <div class="proj1-details">
+        
+            <h2>Netflix Homepage</h2>
+            <div>
+                <img src="Screenshot 2024-01-09 165302.png" alt="" height="200" width="300">
+            </div>
+            
+          </div>
+        </div>
 
-    <footer>
-        <p>Contact me at: snehagupta25092004@gmail.com</p>
-    </footer>
+        <div class="proj-2">
+          <div class="proj2-details">
+            <h2>Weather App</h2>
+            <div>
+                <img src="Screenshot 2024-01-09 165643.png" alt="" height="200" width="300">
+            </div>
+           <br><br><br>
+          </div>
 
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="contact" id="contact-me">
+    <div class="container">
+      <div class="contact-content">
+        <h2>Contact Me</h2>
+        <p class="mail">
+          Get in touch with me <i class="fas fa-arrow-right"></i> snehagupta25092004@gmail.com
+        </p>
+      
+    </div>
+  </div>
+  <!-- JAVASCRIPT -->
+  <script src="script.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </body>
+
 </html>
