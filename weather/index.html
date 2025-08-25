@@ -1,30 +1,51 @@
+    <section class="recent-searches card">
+      <h3>Recent Searches</h3>
+      <div id="recent-searches-list"></div>
+    </section>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div class="container-fluid">
-    <section class="main">
-      <section class="inputs">
-        <input type="text" placeholder="Enter any city..." id="cityinput">
-        <input type="submit" value="Submit" id="add">
-        <button placeholder="submit" id="add"></button>
-      </section>
-
-      <section class="display">
-        <div class="wrapper">
-          <h2 id="cityoutput"></h2>
-          <p id="description"></p>
-          <p id="temp"></p>
-          <p id="wind"></p>
-        </div>
-      </section>
+  <div class="main-container">
+    <header class="header">
+      <h1>Weather Forecast</h1>
+      <button id="mode-toggle" title="Toggle Dark/Light Mode">🌙</button>
+    </header>
+    <section class="search-section card">
+      <input type="text" id="cityinput" placeholder="Enter city name...">
+      <button id="searchBtn">Search</button>
+      <button id="toggleUnit">°C/°F</button>
+      <div id="error-message" class="error-message"></div>
+      <div id="loading" class="loading" style="display:none;"><span>Loading...</span></div>
     </section>
-
+    <section class="current-weather card">
+      <h2 id="cityoutput"></h2>
+      <div class="weather-main">
+        <img id="weather-icon" src="" alt="Weather Icon" style="display:none;">
+        <div class="weather-info">
+          <div id="description"></div>
+          <div id="temp"></div>
+          <div id="humidity"></div>
+          <div id="pressure"></div>
+          <div id="wind"></div>
+          <div id="sunrise"></div>
+          <div id="sunset"></div>
+        </div>
+      </div>
+    </section>
+    <section class="forecast-section card">
+      <h2>5-Day Forecast</h2>
+      <div id="forecast-cards" class="forecast-cards"></div>
+    </section>
+  <!-- Recent searches removed as requested -->
+    <footer class="footer">
+      <p>Powered by OpenWeatherMap</p>
+    </footer>
   </div>
   <script src="script.js"></script>
 </body>

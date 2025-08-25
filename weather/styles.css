@@ -3,22 +3,216 @@
     padding: 0;
     box-sizing: border-box;
 }
-body
-{
-    background: #116396;
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+    color: #222;
+    transition: background 0.4s;
 }
-.container-fluid
-{
-    width: 400px;
-    margin: 60px auto;
+.main-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 32px 20px 40px 20px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 28px;
+    box-shadow: 0 8px 32px rgba(17,99,150,0.18);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 32px 12px 32px;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(102,166,255,0.08);
+    border-radius: 18px 18px 0 0;
+}
+.header h1 {
+    font-size: 2rem;
+    color: #1976d2;
+    margin: 0;
+}
+#mode-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #1976d2;
+    transition: color 0.3s;
+}
+#mode-toggle:hover {
+    color: #fda085;
+}
+.card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 2px 12px rgba(102,166,255,0.10);
+    padding: 24px 18px;
+    margin: 24px auto;
+    max-width: 600px;
+    transition: background 0.4s, box-shadow 0.3s, transform 0.3s;
+}
+.card:hover {
+    box-shadow: 0 8px 32px rgba(33,147,176,0.18), 0 2px 12px rgba(109,213,237,0.18);
+    transform: translateY(-4px) scale(1.03);
+}
+.search-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#cityinput {
     padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+        border: 2px solid #6dd5ed;
+        margin-right: 8px;
+        width: 420px;
+        padding: 18px;
+        font-size: 1.25rem;
+        border-radius: 14px;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+    #cityinput:hover, #cityinput:focus {
+        border-color: #2193b0;
+        box-shadow: 0 2px 8px rgba(109,213,237,0.18);
 }
-.inputs 
-{
-    padding: 2rem 0 2rem 0;
+#searchBtn, #toggleUnit {
+    padding: 12px 32px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: none;
+    background: #6dd5ed;
+    color: #222;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 12px;
+    margin-right: 8px;
+    box-shadow: 0 2px 8px rgba(109,213,237,0.15);
+    transition: background 0.3s, color 0.3s;
+}
+#searchBtn:hover, #toggleUnit:hover {
+    background: #2193b0;
+    color: #fff;
+}
+.error-message {
+    color: #d32f2f;
+    background: #ffebee;
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 1.15rem;
+    border-radius: 12px;
+    border: 1.5px solid #90caf9;
+    margin-right: 8px;
+    width: 320px;
     text-align: center;
+    color: #1976d2;
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+.current-weather {
+    text-align: center;
+}
+.weather-main {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    background: white;
+    gap: 24px;
+}
+#weather-icon {
+    width: 80px;
+    height: 80px;
+    margin-right: 12px;
+}
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+.forecast-section {
+    text-align: center;
+}
+.forecast-cards {
+    display: flex;
+    gap: 18px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+.forecast-card {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    border-radius: 14px;
+    box-shadow: 0 2px 8px rgba(253,160,133,0.10);
+    padding: 18px 12px;
+    width: 120px;
+    color: #fff;
+    font-family: 'Roboto', Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background 0.4s;
+}
+.forecast-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 8px;
+}
+.footer {
+    text-align: center;
+    padding: 18px 0 12px 0;
+    background: #fff;
+    color: #1976d2;
+    font-size: 1rem;
+    margin-top: 32px;
+    border-radius: 0 0 18px 18px;
+}
+/* Dark mode styles */
+body.dark {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+    color: #eee;
+}
+body.dark .header, body.dark .footer {
+    background: #232526;
+    color: #fda085;
+}
+body.dark .card {
+    background: #232526;
+    color: #eee;
+}
+body.dark .forecast-card {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+    color: #fda085;
+}
+body.dark #searchBtn, body.dark #toggleUnit {
+    background: #fda085;
+    color: #232526;
+}
+body.dark #mode-toggle {
+    color: #fda085;
+}
+@media (max-width: 700px) {
+    .main-container {
+        max-width: 98vw;
+        padding: 12px 4vw;
+    }
+    .card {
+        max-width: 98vw;
+        padding: 12px 4vw;
+    }
+    .forecast-cards {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .forecast-card {
+        width: 100%;
+        min-width: 180px;
+    }
+    .header {
+        flex-direction: column;
+        gap: 8px;
+        padding: 18px 8px 8px 8px;
+    }
 }
 .inputs input[type="text"] 
 {
